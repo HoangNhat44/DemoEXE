@@ -1,0 +1,110 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123",
+      "role": "admin",
+      "avatar": "https://i.pravatar.cc/150?img=33",
+      "messages": "Chào bạn, mình là Linh Tran Photographer. Mình có thể hỗ trợ tư vấn thêm về các gói chụp và dịch vụ phù hợp cho bạn không?"
+    },
+    {
+      "id": "2",
+      "username": "user",
+      "password": "123",
+      "role": "user",
+      "avatar": "https://i.pravatar.cc/150?img=27",
+      "messages": "Xin chào, mình là Mai Anh Studio. Bạn cần mình tư vấn thêm về lịch chụp hoặc các gói dịch vụ không?"
+    },
+    {
+      "id": "3",
+      "username": "admin1",
+      "password": "123",
+      "role": "admin",
+      "locked": false,
+      "avatar": "https://i.pravatar.cc/150?img=5",
+      "messages": "Chào bạn, mình là Thanh Pham Makeup Artist. Nếu bạn cần thông tin chi tiết về các gói makeup/chụp ảnh thì mình sẵn sàng hỗ trợ nhé!"
+    },
+    {
+      "id": "4",
+      "username": "user1",
+      "password": "123",
+      "role": "user",
+      "avatar": "https://i.pravatar.cc/150?img=12",
+      "messages": "Hi bạn, mình là Huy Nguyen Studio. Bạn đang quan tâm đến gói chụp nào để mình tư vấn chi tiết hơn cho bạn nha?"
+    },
+    {
+      "id": "5",
+      "username": "huy12",
+      "password": "123",
+      "role": "staff",
+      "locked": false,
+      "avatar": "https://i.pravatar.cc/150?img=18",
+      "messages": "Chào bạn, mình là Lan Le Photography. Mình có thể giúp bạn chọn gói chụp phù hợp với nhu cầu của bạn được không?"
+    }
+  ],
+  "category": [
+    {
+      "id": "1",
+      "name": "Chụp ảnh cưới"
+    },
+    {
+      "id": "2",
+      "name": "Chụp ảnh chân dung"
+    },
+    {
+      "id": "3",
+      "name": "Chụp ảnh sự kiện"
+    },
+    {
+      "id": "4",
+      "name": "Chụp ảnh sản phẩm"
+    },
+    {
+      "id": "5",
+      "name": "Chụp ảnh kỷ yếu"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Gói chụp ảnh cưới Premium",
+      "categoryid": "1",
+      "price": 5000000,
+      "userid": "1",
+      "image": "https://images.unsplash.com/photo-1520854221256-17451cc331bf"
+    },
+    {
+      "id": "2",
+      "name": "Gói chụp chân dung studio",
+      "categoryid": "2",
+      "price": 1200000,
+      "userid": "2",
+      "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2"
+    },
+    {
+      "id": "3",
+      "name": "Gói chụp ảnh sự kiện chuyên nghiệp",
+      "categoryid": "3",
+      "price": 3000000,
+      "userid": "3",
+      "image": "https://images.unsplash.com/photo-1511578314322-379afb476865"
+    },
+    {
+      "id": "4",
+      "name": "Gói chụp ảnh sản phẩm thương mại",
+      "categoryid": "4",
+      "price": 2000000,
+      "userid": "4",
+      "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f"
+    },
+    {
+      "id": "5",
+      "name": "Gói chụp ảnh kỷ yếu sinh viên",
+      "categoryid": "5",
+      "price": 2500000,
+      "userid": "5",
+      "image": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1"
+    }
+  ]
+}
