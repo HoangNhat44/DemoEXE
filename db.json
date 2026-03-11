@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "password": "123",
+      "role": "admin"
+    },
+    {
+      "id": "3",
+      "username": "user",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "4",
+      "username": "admin1",
+      "password": "123",
+      "role": "admin",
+      "locked": false
+    },
+    {
+      "id": "5",
+      "username": "user1",
+      "password": "123",
+      "role": "user"
+    },
+    {
+      "id": "6",
+      "username": "huy12",
+      "password": "123",
+      "role": "staff",
+      "locked": false
+    }
+  ]
+}
