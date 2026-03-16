@@ -1,0 +1,210 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "fullName": "Khách Hàng Demo",
+      "email": "customer@matcha.vn",
+      "phone": "0900000000",
+      "password": "123456",
+      "role": "customer",
+      "categoryId": null,
+      "createdAt": "2026-03-16T08:00:00.000Z"
+    },
+    {
+      "id": 2,
+      "fullName": "Hoàng Huy Nhật",
+      "email": "abc@gmail.com",
+      "phone": "0123456789",
+      "password": "123456",
+      "role": "customer",
+      "categoryId": null,
+      "createdAt": "2026-03-16T09:08:11.908Z"
+    },
+    {
+      "id": 3,
+      "fullName": "Ngọc Huy",
+      "email": "abc1@gmail.com",
+      "phone": "0123456788",
+      "password": "123456",
+      "role": "customer",
+      "categoryId": null,
+      "createdAt": "2026-03-16T09:27:22.526Z"
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "categoryId": "photographer",
+      "categoryLabel": "NHIẾP ẢNH",
+      "title": "Chụp ảnh Couple & Cưới",
+      "provider": "Minh Trần",
+      "price": "1.200.000 đ",
+      "rating": 4.9,
+      "reviewCount": 268,
+      "description": "Phong cách chụp tự nhiên, ánh sáng mềm và tập trung vào cảm xúc thật của cặp đôi. Phù hợp cho ảnh cưới, ảnh kỷ niệm và các bộ ảnh ngoài trời.",
+      "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p1-basic",
+          "name": "Couple ngoại cảnh cơ bản",
+          "duration": "2 giờ",
+          "location": "Hà Nội / Nội thành",
+          "price": "1.200.000 đ"
+        },
+        {
+          "id": "p1-premium",
+          "name": "Pre-wedding trọn gói",
+          "duration": "5 giờ",
+          "location": "Hà Nội / Ngoại thành",
+          "price": "3.500.000 đ"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "categoryId": "makeup",
+      "categoryLabel": "MAKEUP",
+      "title": "Chuyên gia Trang điểm",
+      "provider": "Hoa Nguyễn MUA",
+      "price": "600.000 đ",
+      "rating": 5,
+      "reviewCount": 342,
+      "description": "Trang điểm cá nhân, kỷ yếu và cô dâu theo phong cách trong trẻo hoặc sang trọng. Sử dụng mỹ phẩm chuyên nghiệp, bám lâu và phù hợp nhiều tone da.",
+      "image": "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p2-basic",
+          "name": "Makeup Kỷ yếu / Cá nhân",
+          "duration": "1.5 giờ",
+          "location": "Tại tiệm / Tận nơi",
+          "price": "600.000 đ"
+        },
+        {
+          "id": "p2-wedding",
+          "name": "Makeup Cô dâu (Tiệc)",
+          "duration": "2.5 giờ",
+          "location": "Tận nơi",
+          "price": "2.000.000 đ"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "categoryId": "wardrobe",
+      "categoryLabel": "TRANG PHỤC",
+      "title": "Cho thuê Trang phục",
+      "provider": "The Retro Muse",
+      "price": "150.000 đ",
+      "rating": 4.8,
+      "reviewCount": 156,
+      "description": "Kho đồ đa dạng từ vintage, thanh lịch đến concept thời trang hiện đại. Có hỗ trợ phối set theo moodboard và tư vấn theo dáng người.",
+      "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p3-basic",
+          "name": "Thuê 1 set trang phục",
+          "duration": "1 ngày",
+          "location": "Nhận tại studio",
+          "price": "150.000 đ"
+        },
+        {
+          "id": "p3-style",
+          "name": "Set đồ + styling",
+          "duration": "1 ngày",
+          "location": "Nhận tại studio",
+          "price": "450.000 đ"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "categoryId": "photographer",
+      "categoryLabel": "NHIẾP ẢNH",
+      "title": "Chụp ảnh Sản phẩm",
+      "provider": "Hoàng Lê",
+      "price": "1.500.000 đ",
+      "rating": 4.7,
+      "reviewCount": 191,
+      "description": "Chụp sản phẩm thương mại điện tử, lookbook và chiến dịch nhỏ với bố cục sạch, rõ chất liệu và tối ưu cho social lẫn sàn thương mại điện tử.",
+      "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p4-basic",
+          "name": "Chụp 10 sản phẩm nền trắng",
+          "duration": "3 giờ",
+          "location": "Tại studio",
+          "price": "1.500.000 đ"
+        },
+        {
+          "id": "p4-branding",
+          "name": "Concept branding mini",
+          "duration": "5 giờ",
+          "location": "Tại studio / Tận nơi",
+          "price": "3.800.000 đ"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "categoryId": "model",
+      "categoryLabel": "NGƯỜI MẪU",
+      "title": "Người mẫu lookbook",
+      "provider": "Linh Phạm",
+      "price": "900.000 đ",
+      "rating": 4.9,
+      "reviewCount": 207,
+      "description": "Người mẫu nữ phù hợp lookbook thời trang, beauty và concept tối giản. Kinh nghiệm pose trước ống kính tốt, làm việc đúng giờ và chuyên nghiệp.",
+      "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p5-basic",
+          "name": "Model chụp lookbook 2 giờ",
+          "duration": "2 giờ",
+          "location": "Hà Nội",
+          "price": "900.000 đ"
+        },
+        {
+          "id": "p5-campaign",
+          "name": "Model chiến dịch nửa ngày",
+          "duration": "4 giờ",
+          "location": "Hà Nội / TP. Hồ Chí Minh",
+          "price": "2.200.000 đ"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "categoryId": "studio",
+      "categoryLabel": "STUDIO",
+      "title": "Studio concept tối giản",
+      "provider": "Milk Studio",
+      "price": "1.800.000 đ",
+      "rating": 4.8,
+      "reviewCount": 129,
+      "description": "Không gian studio ánh sáng tự nhiên, nền trơn và đạo cụ tối giản. Phù hợp chụp chân dung, thời trang, beauty và content thương hiệu nhỏ.",
+      "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p6-basic",
+          "name": "Thuê studio 2 giờ",
+          "duration": "2 giờ",
+          "location": "Quận 3, TP. Hồ Chí Minh",
+          "price": "1.800.000 đ"
+        },
+        {
+          "id": "p6-halfday",
+          "name": "Thuê studio nửa ngày",
+          "duration": "4 giờ",
+          "location": "Quận 3, TP. Hồ Chí Minh",
+          "price": "3.200.000 đ"
+        }
+      ]
+    }
+  ]
+}
