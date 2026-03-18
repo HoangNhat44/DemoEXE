@@ -4,6 +4,7 @@ import ServiceCard from '../services/ServiceCard';
 
 function ExploreSection({
   activeCategory,
+  categories,
   error,
   filteredServices,
   isLoading,
@@ -18,7 +19,11 @@ function ExploreSection({
         <p>Tìm kiếm đối tác hoàn hảo cho concept của bạn.</p>
       </div>
 
-      <CategoryFilter activeCategory={activeCategory} onCategoryChange={onCategoryChange} />
+      <CategoryFilter
+        activeCategory={activeCategory}
+        categories={categories}
+        onCategoryChange={onCategoryChange}
+      />
 
       {isLoading ? <p className="status-message">Đang tải dữ liệu...</p> : null}
       {!isLoading && error ? <p className="status-message error-message">{error}</p> : null}

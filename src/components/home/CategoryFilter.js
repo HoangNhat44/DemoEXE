@@ -1,10 +1,10 @@
-import { categories } from '../../data/categories';
+import { getCategoryIcon } from '../../utils/categoryIcons';
 
-function CategoryFilter({ activeCategory, onCategoryChange }) {
+function CategoryFilter({ activeCategory, categories, onCategoryChange }) {
   return (
     <div className="category-row">
       {categories.map((category) => {
-        const Icon = category.icon;
+        const Icon = getCategoryIcon(category.iconKey);
         const isActive = category.id === activeCategory;
 
         return (

@@ -46,3 +46,43 @@ export async function apiPost(path, payload) {
     throw error;
   }
 }
+
+export async function apiPut(path, payload) {
+  try {
+    const response = await fetch(path, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    return parseResponse(response);
+  } catch (error) {
+    if (error instanceof TypeError) {
+      throw createServerConnectionError();
+    }
+
+    throw error;
+  }
+}
+
+export async function apiDelete(path, payload) {
+  try {
+    const response = await fetch(path, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payload),
+    });
+
+    return parseResponse(response);
+  } catch (error) {
+    if (error instanceof TypeError) {
+      throw createServerConnectionError();
+    }
+
+    throw error;
+  }
+}

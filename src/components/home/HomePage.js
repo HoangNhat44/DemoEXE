@@ -3,6 +3,7 @@ import HeroSection from './HeroSection';
 
 function HomePage({
   activeCategory,
+  categories,
   customer,
   error,
   filteredServices,
@@ -17,6 +18,7 @@ function HomePage({
       <HeroSection customer={customer} onLogout={onLogout} onOpenAuth={onOpenAuth} />
       <ExploreSection
         activeCategory={activeCategory}
+        categories={categories}
         error={error}
         filteredServices={filteredServices}
         isLoading={isLoading}

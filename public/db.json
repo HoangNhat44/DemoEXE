@@ -22,20 +22,51 @@
     },
     {
       "id": 3,
-      "fullName": "Ngọc Huy",
-      "email": "abc1@gmail.com",
-      "phone": "0123456788",
+      "fullName": "partner",
+      "email": "abc2@gmail.com",
+      "phone": "0123456789",
       "password": "123456",
-      "role": "customer",
-      "categoryId": null,
-      "createdAt": "2026-03-16T09:27:22.526Z"
+      "role": "partner",
+      "categoryId": 1,
+      "createdAt": "2026-03-16T10:43:47.923Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "label": "Nhiếp ảnh gia",
+      "badgeLabel": "NHIẾP ẢNH",
+      "iconKey": "camera"
+    },
+    {
+      "id": 2,
+      "label": "Makeup Artist",
+      "badgeLabel": "MAKEUP",
+      "iconKey": "scissors"
+    },
+    {
+      "id": 3,
+      "label": "Thuê trang phục",
+      "badgeLabel": "TRANG PHỤC",
+      "iconKey": "shirt"
+    },
+    {
+      "id": 4,
+      "label": "Người mẫu",
+      "badgeLabel": "NGƯỜI MẪU",
+      "iconKey": "userCheck"
+    },
+    {
+      "id": 5,
+      "label": "Studio & Concept",
+      "badgeLabel": "STUDIO",
+      "iconKey": "home"
     }
   ],
   "services": [
     {
       "id": 1,
-      "categoryId": "photographer",
-      "categoryLabel": "NHIẾP ẢNH",
+      "categoryId": 1,
       "title": "Chụp ảnh Couple & Cưới",
       "provider": "Minh Trần",
       "price": "1.200.000 đ",
@@ -63,8 +94,7 @@
     },
     {
       "id": 2,
-      "categoryId": "makeup",
-      "categoryLabel": "MAKEUP",
+      "categoryId": 2,
       "title": "Chuyên gia Trang điểm",
       "provider": "Hoa Nguyễn MUA",
       "price": "600.000 đ",
@@ -92,8 +122,7 @@
     },
     {
       "id": 3,
-      "categoryId": "wardrobe",
-      "categoryLabel": "TRANG PHỤC",
+      "categoryId": 3,
       "title": "Cho thuê Trang phục",
       "provider": "The Retro Muse",
       "price": "150.000 đ",
@@ -121,8 +150,7 @@
     },
     {
       "id": 4,
-      "categoryId": "photographer",
-      "categoryLabel": "NHIẾP ẢNH",
+      "categoryId": 1,
       "title": "Chụp ảnh Sản phẩm",
       "provider": "Hoàng Lê",
       "price": "1.500.000 đ",
@@ -150,8 +178,7 @@
     },
     {
       "id": 5,
-      "categoryId": "model",
-      "categoryLabel": "NGƯỜI MẪU",
+      "categoryId": 4,
       "title": "Người mẫu lookbook",
       "provider": "Linh Phạm",
       "price": "900.000 đ",
@@ -179,8 +206,7 @@
     },
     {
       "id": 6,
-      "categoryId": "studio",
-      "categoryLabel": "STUDIO",
+      "categoryId": 5,
       "title": "Studio concept tối giản",
       "provider": "Milk Studio",
       "price": "1.800.000 đ",
@@ -203,6 +229,28 @@
           "duration": "4 giờ",
           "location": "Quận 3, TP. Hồ Chí Minh",
           "price": "3.200.000 đ"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "ownerId": 3,
+      "categoryId": 1,
+      "title": "Chụp ảnh",
+      "provider": "partner",
+      "price": "500000",
+      "rating": 5,
+      "reviewCount": 0,
+      "description": "chụp ảnh nàng thơ",
+      "image": "https://aodaisg.com/wp-content/uploads/2020/06/IMG_2516.jpg",
+      "avatar": "https://delphine-artists.co.uk/wp-content/uploads/2025/12/lanh-lung-cartoon-girl-cute-avatar-che-mat-anime-6.webp",
+      "packages": [
+        {
+          "id": "pkg-7",
+          "name": "áo dài 1",
+          "duration": "2",
+          "location": "Hà Nội",
+          "price": "1000000"
         }
       ]
     }

@@ -2,9 +2,28 @@ import { ShoppingCart, Sparkles } from 'lucide-react';
 import AuthActions from '../auth/AuthActions';
 import Brand from '../common/Brand';
 
+const HERO_POSTER =
+  'https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1600&q=80';
+const HERO_VIDEO =
+  'https://www.pexels.com/download/video/29539460/';
+
 function HeroSection({ customer, onLogout, onOpenAuth }) {
   return (
     <section className="hero-section">
+      <div className="hero-media" aria-hidden="true">
+        <video
+          className="hero-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          poster={HERO_POSTER}
+        >
+          <source src={HERO_VIDEO} type="video/mp4" />
+        </video>
+      </div>
+
       <div className="hero-overlay" />
 
       <header className="topbar">

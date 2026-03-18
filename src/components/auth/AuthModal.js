@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 
 const initialRegisterForm = {
+  accountType: 'customer',
   fullName: '',
   email: '',
   phone: '',
   password: '',
   confirmPassword: '',
+  categoryId: '',
 };
 
 const initialLoginForm = {
@@ -14,7 +16,7 @@ const initialLoginForm = {
   password: '',
 };
 
-function AuthModal({ isOpen, mode, onClose, onLogin, onRegister }) {
+function AuthModal({ categories, isOpen, mode, onClose, onLogin, onRegister }) {
   const [activeTab, setActiveTab] = useState(mode);
   const [loginForm, setLoginForm] = useState(initialLoginForm);
   const [registerForm, setRegisterForm] = useState(initialRegisterForm);
@@ -77,6 +79,11 @@ function AuthModal({ isOpen, mode, onClose, onLogin, onRegister }) {
       return;
     }
 
+    if (registerForm.accountType === 'partner' && !registerForm.categoryId) {
+      setError('Vui lòng chọn danh mục đối tác.');
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -85,8 +92,9 @@ function AuthModal({ isOpen, mode, onClose, onLogin, onRegister }) {
         email: registerForm.email,
         phone: registerForm.phone,
         password: registerForm.password,
-        role: 'customer',
-        categoryId: null,
+        role: registerForm.accountType === 'partner' ? 'partner' : 'customer',
+        categoryId:
+          registerForm.accountType === 'partner' ? Number(registerForm.categoryId) : null,
       });
       setSuccessMessage(result.message || 'Đăng ký thành công.');
       setRegisterForm(initialRegisterForm);
@@ -109,7 +117,7 @@ function AuthModal({ isOpen, mode, onClose, onLogin, onRegister }) {
       >
         <div className="auth-modal-header">
           <div>
-            <p className="auth-modal-kicker">Tài khoản khách hàng</p>
+            <p className="auth-modal-kicker">Tài khoản người dùng</p>
             <h2 id="auth-modal-title">{activeTab === 'login' ? 'Đăng nhập' : 'Đăng ký'}</h2>
           </div>
           <button className="auth-close-button" type="button" aria-label="Đóng" onClick={onClose}>
@@ -167,6 +175,41 @@ function AuthModal({ isOpen, mode, onClose, onLogin, onRegister }) {
           </form>
         ) : (
           <form className="auth-form" onSubmit={handleRegisterSubmit}>
+            <div className="auth-field">
+              <span>Bạn đăng ký với vai trò</span>
+              <div className="auth-role-row">
+                <button
+                  className={`auth-role-button ${
+                    registerForm.accountType === 'customer' ? 'active' : ''
+                  }`}
+                  type="button"
+                  onClick={() =>
+                    setRegisterForm((current) => ({
+                      ...current,
+                      accountType: 'customer',
+                      categoryId: '',
+                    }))
+                  }
+                >
+                  Customer
+                </button>
+                <button
+                  className={`auth-role-button ${
+                    registerForm.accountType === 'partner' ? 'active' : ''
+                  }`}
+                  type="button"
+                  onClick={() =>
+                    setRegisterForm((current) => ({
+                      ...current,
+                      accountType: 'partner',
+                    }))
+                  }
+                >
+                  Đối tác
+                </button>
+              </div>
+            </div>
+
             <label className="auth-field">
               <span>Họ và tên</span>
               <input
@@ -199,6 +242,30 @@ function AuthModal({ isOpen, mode, onClose, onLogin, onRegister }) {
                 }
               />
             </label>
+
+            {registerForm.accountType === 'partner' ? (
+              <label className="auth-field">
+                <span>Danh mục đối tác</span>
+                <select
+                  required
+                  value={registerForm.categoryId}
+                  onChange={(event) =>
+                    setRegisterForm((current) => ({
+                      ...current,
+                      categoryId: event.target.value,
+                    }))
+                  }
+                >
+                  <option value="">Chọn danh mục</option>
+                  {categories.map((category) => (
+                    <option key={category.id} value={category.id}>
+                      {category.label}
+                    </option>
+                  ))}
+                </select>
+              </label>
+            ) : null}
+
             <label className="auth-field">
               <span>Mật khẩu</span>
               <input
