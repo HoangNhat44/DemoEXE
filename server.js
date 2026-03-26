@@ -4,6 +4,35 @@ const path = require('path');
 
 const PORT = process.env.PORT || 3001;
 const DB_PATH = path.join(__dirname, 'public', 'db.json');
+const ENV_PATH = path.join(__dirname, '.env.local');
+
+async function loadLocalEnv() {
+  try {
+    const raw = await fs.readFile(ENV_PATH, 'utf8');
+    raw.split(/\r?\n/).forEach((line) => {
+      const trimmedLine = line.trim();
+
+      if (!trimmedLine || trimmedLine.startsWith('#')) {
+        return;
+      }
+
+      const separatorIndex = trimmedLine.indexOf('=');
+
+      if (separatorIndex === -1) {
+        return;
+      }
+
+      const key = trimmedLine.slice(0, separatorIndex).trim();
+      const value = trimmedLine.slice(separatorIndex + 1).trim();
+
+      if (key && !process.env[key]) {
+        process.env[key] = value;
+      }
+    });
+  } catch (error) {
+    // Ignore missing local env file in development.
+  }
+}
 
 function sendJson(response, statusCode, payload) {
   response.writeHead(statusCode, {
@@ -100,6 +129,10 @@ function buildServicePayload(partner, services, payload, existingService) {
     rating: existingService?.rating ?? 5,
     reviewCount: existingService?.reviewCount ?? 0,
     description: String(payload.description || '').trim(),
+    availableTimeSlots:
+      String(payload.availableTimeSlots || '').trim() || existingService?.availableTimeSlots || '',
+    availableDates:
+      String(payload.availableDates || '').trim() || existingService?.availableDates || '',
     image: String(payload.image || '').trim(),
     avatar:
       String(payload.avatar || '').trim() ||
@@ -129,6 +162,35 @@ async function readBody(request) {
   }
 
   return JSON.parse(Buffer.concat(chunks).toString('utf8'));
+}
+
+function buildConceptPrompt(payload) {
+  return [
+    'Bạn là creative director cho nền tảng booking chụp ảnh.',
+    'Hãy tạo concept chụp ảnh bằng tiếng Việt, rõ ràng, giàu hình ảnh và dễ triển khai.',
+    `Ý tưởng người dùng: ${String(payload.idea || '').trim() || 'Chưa mô tả cụ thể'}`,
+    `Khu vực: ${String(payload.locationLabel || 'Tất cả khu vực').trim()}`,
+    `Ngân sách: ${String(payload.budgetLabel || 'Mọi mức giá').trim()}`,
+    `Phong cách: ${String(payload.styleLabel || 'Mọi phong cách').trim()}`,
+    `Dùng AI hỗ trợ: ${payload.useAi ? 'Có' : 'Không'}`,
+    'Trả lời đúng format sau:',
+    '1. Tên concept',
+    '2. Mood & cảm xúc',
+    '3. Bối cảnh gợi ý',
+    '4. Trang phục & makeup',
+    '5. Shot list 5 ý',
+    '6. Gợi ý ekip phù hợp',
+    '7. Mẹo triển khai nhanh',
+  ].join('\n');
+}
+
+function extractGeminiText(data) {
+  const text = data?.candidates?.[0]?.content?.parts
+    ?.map((part) => part.text || '')
+    .join('\n')
+    .trim();
+
+  return text || '';
 }
 
 const server = http.createServer(async (request, response) => {
@@ -234,6 +296,70 @@ const server = http.createServer(async (request, response) => {
         user: sanitizeUser(user),
         message: 'Đăng nhập thành công.',
       });
+      return;
+    }
+
+    if (request.method === 'POST' && url.pathname === '/api/ai/concept') {
+      const payload = await readBody(request);
+      const apiKey = process.env.GEMINI_API_KEY;
+
+      if (!apiKey) {
+        sendJson(response, 500, {
+          message: 'Thiếu GEMINI_API_KEY trong .env.local. Hãy thêm key rồi chạy lại server.',
+        });
+        return;
+      }
+
+      const idea = String(payload.idea || '').trim();
+
+      if (!idea) {
+        sendJson(response, 400, { message: 'Vui lòng nhập mô tả ý tưởng trước khi tạo concept.' });
+        return;
+      }
+
+      const geminiResponse = await fetch(
+        'https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent',
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'x-goog-api-key': apiKey,
+          },
+          body: JSON.stringify({
+            contents: [
+              {
+                parts: [
+                  {
+                    text: buildConceptPrompt(payload),
+                  },
+                ],
+              },
+            ],
+          }),
+        }
+      );
+
+      const geminiData = await geminiResponse.json().catch(() => ({}));
+
+      if (!geminiResponse.ok) {
+        sendJson(response, geminiResponse.status, {
+          message:
+            geminiData?.error?.message ||
+            'Không thể tạo concept từ Gemini lúc này. Vui lòng thử lại.',
+        });
+        return;
+      }
+
+      const concept = extractGeminiText(geminiData);
+
+      if (!concept) {
+        sendJson(response, 502, {
+          message: 'Gemini đã phản hồi nhưng không có nội dung concept hợp lệ.',
+        });
+        return;
+      }
+
+      sendJson(response, 200, { concept });
       return;
     }
 
@@ -343,6 +469,8 @@ const server = http.createServer(async (request, response) => {
   }
 });
 
-server.listen(PORT, () => {
+loadLocalEnv().finally(() => {
+  server.listen(PORT, () => {
   console.log(`API server is running on http://localhost:${PORT}`);
+  });
 });

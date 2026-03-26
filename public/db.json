@@ -29,6 +29,16 @@
       "role": "partner",
       "categoryId": 1,
       "createdAt": "2026-03-16T10:43:47.923Z"
+    },
+    {
+      "id": 4,
+      "fullName": "Hoàng Huy Nhật",
+      "email": "nhathhhe173353@fpt.edu.vn",
+      "phone": "0973018102",
+      "password": "123456",
+      "role": "partner",
+      "categoryId": 1,
+      "createdAt": "2026-03-24T11:15:52.894Z"
     }
   ],
   "categories": [
@@ -67,25 +77,25 @@
     {
       "id": 1,
       "categoryId": 1,
-      "title": "Chụp ảnh Couple & Cưới",
+      "title": "Chụp ảnh nàng thơ nhẹ nhàng",
       "provider": "Minh Trần",
       "price": "1.200.000 đ",
       "rating": 4.9,
       "reviewCount": 268,
-      "description": "Phong cách chụp tự nhiên, ánh sáng mềm và tập trung vào cảm xúc thật của cặp đôi. Phù hợp cho ảnh cưới, ảnh kỷ niệm và các bộ ảnh ngoài trời.",
-      "image": "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80",
+      "description": "Phong cách chụp tự nhiên, ánh sáng mềm và tập trung vào cảm xúc thật và hợp với các bộ ảnh ngoài trời.",
+      "image": "https://i.pinimg.com/1200x/ad/de/c7/addec79e681f0b7b5818195a45d379c1.jpg",
       "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
       "packages": [
         {
           "id": "p1-basic",
-          "name": "Couple ngoại cảnh cơ bản",
+          "name": "Gói chụp cơ bản",
           "duration": "2 giờ",
           "location": "Hà Nội / Nội thành",
           "price": "1.200.000 đ"
         },
         {
           "id": "p1-premium",
-          "name": "Pre-wedding trọn gói",
+          "name": "Chụp ảnh ngoài trời trọn gói",
           "duration": "5 giờ",
           "location": "Hà Nội / Ngoại thành",
           "price": "3.500.000 đ"
@@ -130,7 +140,7 @@
       "reviewCount": 156,
       "description": "Kho đồ đa dạng từ vintage, thanh lịch đến concept thời trang hiện đại. Có hỗ trợ phối set theo moodboard và tư vấn theo dáng người.",
       "image": "https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80",
-      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=200&q=80",
       "packages": [
         {
           "id": "p3-basic",
@@ -242,7 +252,7 @@
       "rating": 5,
       "reviewCount": 0,
       "description": "chụp ảnh nàng thơ",
-      "image": "https://aodaisg.com/wp-content/uploads/2020/06/IMG_2516.jpg",
+      "image": "https://i.pinimg.com/1200x/21/bb/2e/21bb2e331e8881cd4dc2c296fdaf828f.jpg",
       "avatar": "https://delphine-artists.co.uk/wp-content/uploads/2025/12/lanh-lung-cartoon-girl-cute-avatar-che-mat-anime-6.webp",
       "packages": [
         {
@@ -251,6 +261,370 @@
           "duration": "2",
           "location": "Hà Nội",
           "price": "1000000"
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "categoryId": 1,
+      "title": "Chup anh Cua hang Cafe",
+      "provider": "An Nhien Studio",
+      "price": "950.000 d",
+      "rating": 4.8,
+      "reviewCount": 118,
+      "description": "Goi chup khong gian quan, mon nuoc va hinh concept danh cho social media, menu va banner truyen thong.",
+      "image": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p8-basic",
+          "name": "Chup 15 anh quan",
+          "duration": "2 gio",
+          "location": "Tan noi",
+          "price": "950.000 d"
+        },
+        {
+          "id": "p8-full",
+          "name": "Chup concept menu + space",
+          "duration": "4 gio",
+          "location": "Tan noi",
+          "price": "2.200.000 d"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "categoryId": 1,
+      "title": "Chup anh Chan dung Ca nhan",
+      "provider": "Trung Vu Visual",
+      "price": "800.000 d",
+      "rating": 4.9,
+      "reviewCount": 174,
+      "description": "Chan dung ca nhan theo style lifestyle, profile chuyen nghiep hoac hinh social media nhan vao than thai tu nhien.",
+      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p9-basic",
+          "name": "Portrait 1 outfit",
+          "duration": "1.5 gio",
+          "location": "Studio / ngoai troi",
+          "price": "800.000 d"
+        },
+        {
+          "id": "p9-pro",
+          "name": "Profile chuyen nghiep 3 outfit",
+          "duration": "3 gio",
+          "location": "Studio",
+          "price": "1.900.000 d"
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "categoryId": 2,
+      "title": "Makeup Co dau Tong Han",
+      "provider": "Lily Bridal Makeover",
+      "price": "1.200.000 d",
+      "rating": 5,
+      "reviewCount": 287,
+      "description": "Makeup co dau phong cach Han Quoc, trong treo, da bong, phu hop chup hinh va tiec cuoi.",
+      "image": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p10-ceremony",
+          "name": "Makeup len le",
+          "duration": "2 gio",
+          "location": "Tan noi",
+          "price": "1.200.000 d"
+        },
+        {
+          "id": "p10-full",
+          "name": "Makeup + hairstyling ca ngay",
+          "duration": "6 gio",
+          "location": "Tan noi",
+          "price": "3.600.000 d"
+        }
+      ]
+    },
+    {
+      "id": 11,
+      "categoryId": 2,
+      "title": "Makeup Beauty Shooting",
+      "provider": "Yen Beauty Lab",
+      "price": "700.000 d",
+      "rating": 4.7,
+      "reviewCount": 142,
+      "description": "Layout beauty shooting cho lookbook, concept thoi trang va quay ngan, nhan vao lan da, mau mat va kieu toc dong dieu.",
+      "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p11-basic",
+          "name": "Beauty makeup co dien",
+          "duration": "1.5 gio",
+          "location": "Tai studio",
+          "price": "700.000 d"
+        },
+        {
+          "id": "p11-fashion",
+          "name": "Fashion makeup + touchup",
+          "duration": "4 gio",
+          "location": "Tai set quay/chup",
+          "price": "1.800.000 d"
+        }
+      ]
+    },
+    {
+      "id": 12,
+      "categoryId": 3,
+      "title": "Thue Vay Da hoi",
+      "provider": "Lumiere Wardrobe",
+      "price": "350.000 d",
+      "rating": 4.8,
+      "reviewCount": 93,
+      "description": "Cho thue vay da hoi, vay chup concept va tiec toi voi nhieu size, co ho tro chinh gau nhanh.",
+      "image": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p12-basic",
+          "name": "Thue 1 vay / 24h",
+          "duration": "1 ngay",
+          "location": "Nhan tai showroom",
+          "price": "350.000 d"
+        },
+        {
+          "id": "p12-premium",
+          "name": "Vay + phu kien",
+          "duration": "1 ngay",
+          "location": "Nhan tai showroom",
+          "price": "650.000 d"
+        }
+      ]
+    },
+    {
+      "id": 13,
+      "categoryId": 3,
+      "title": "Thue Ao dai Concept",
+      "provider": "Net Xua Closet",
+      "price": "200.000 d",
+      "rating": 4.9,
+      "reviewCount": 165,
+      "description": "Bo suu tap ao dai truyen thong va cach tan cho chup ky yeu, tet, concept studio va ngoai canh.",
+      "image": "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p13-basic",
+          "name": "Thue 1 bo ao dai",
+          "duration": "1 ngay",
+          "location": "Nhan tai cua hang",
+          "price": "200.000 d"
+        },
+        {
+          "id": "p13-set",
+          "name": "Ao dai + muc cai + non",
+          "duration": "1 ngay",
+          "location": "Nhan tai cua hang",
+          "price": "420.000 d"
+        }
+      ]
+    },
+    {
+      "id": 14,
+      "categoryId": 4,
+      "title": "Nguoi mau Beauty Close-up",
+      "provider": "Thao Van",
+      "price": "1.100.000 d",
+      "rating": 4.9,
+      "reviewCount": 134,
+      "description": "Model chuyen beauty close-up, phu hop chup my pham, trang suc va concept can mat can bieu cam tinh te.",
+      "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p14-basic",
+          "name": "Beauty close-up 2 gio",
+          "duration": "2 gio",
+          "location": "TP. Ho Chi Minh",
+          "price": "1.100.000 d"
+        },
+        {
+          "id": "p14-campaign",
+          "name": "Campaign beauty nua ngay",
+          "duration": "4 gio",
+          "location": "TP. Ho Chi Minh",
+          "price": "2.500.000 d"
+        }
+      ]
+    },
+    {
+      "id": 15,
+      "categoryId": 4,
+      "title": "Nguoi mau Streetwear Nam",
+      "provider": "Gia Khanh",
+      "price": "950.000 d",
+      "rating": 4.7,
+      "reviewCount": 88,
+      "description": "Model nam cho local brand, streetwear, lookbook va outfit review, than thai manh va chuyen pose nhanh.",
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p15-basic",
+          "name": "Lookbook 2 gio",
+          "duration": "2 gio",
+          "location": "Ha Noi",
+          "price": "950.000 d"
+        },
+        {
+          "id": "p15-full",
+          "name": "Brand shoot 4 gio",
+          "duration": "4 gio",
+          "location": "Ha Noi / TP. Ho Chi Minh",
+          "price": "2.100.000 d"
+        }
+      ]
+    },
+    {
+      "id": 16,
+      "categoryId": 5,
+      "title": "Studio Han Quoc Pastel",
+      "provider": "Cloud Room",
+      "price": "1.600.000 d",
+      "rating": 4.8,
+      "reviewCount": 104,
+      "description": "Phong studio tone pastel, anh sang mem, phu kien xinh xan cho concept couple, beauty, sinh nhat va profile nhe nhang.",
+      "image": "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p16-basic",
+          "name": "Thue studio 2 gio",
+          "duration": "2 gio",
+          "location": "Quan 7, TP. Ho Chi Minh",
+          "price": "1.600.000 d"
+        },
+        {
+          "id": "p16-halfday",
+          "name": "Thue studio nua ngay",
+          "duration": "4 gio",
+          "location": "Quan 7, TP. Ho Chi Minh",
+          "price": "2.900.000 d"
+        }
+      ]
+    },
+    {
+      "id": 17,
+      "categoryId": 5,
+      "title": "Studio Vintage Cinema",
+      "provider": "Frame House",
+      "price": "2.100.000 d",
+      "rating": 4.9,
+      "reviewCount": 76,
+      "description": "Khong gian studio theo phong cach vintage cinema, co ghe nhung, den vang va backdrops co dien cho concept editorial.",
+      "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p17-basic",
+          "name": "Thue studio 3 gio",
+          "duration": "3 gio",
+          "location": "Ha Noi",
+          "price": "2.100.000 d"
+        },
+        {
+          "id": "p17-full",
+          "name": "Studio + ho tro setup",
+          "duration": "5 gio",
+          "location": "Ha Noi",
+          "price": "3.900.000 d"
+        }
+      ]
+    },
+    {
+      "id": 18,
+      "categoryId": 1,
+      "title": "Chup anh Event Workshop",
+      "provider": "Bao Nguyen Media",
+      "price": "1.300.000 d",
+      "rating": 4.8,
+      "reviewCount": 122,
+      "description": "Nhan chup event, workshop, khai truong va talkshow quy mo nho, giao file nhanh cho fanpage va truyen thong sau su kien.",
+      "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p18-basic",
+          "name": "Workshop 2 gio",
+          "duration": "2 gio",
+          "location": "Tan noi",
+          "price": "1.300.000 d"
+        },
+        {
+          "id": "p18-full",
+          "name": "Event 4 gio + edit nhanh",
+          "duration": "4 gio",
+          "location": "Tan noi",
+          "price": "2.800.000 d"
+        }
+      ]
+    },
+    {
+      "id": 19,
+      "categoryId": 2,
+      "title": "Trang diem Ky yeu Nhom",
+      "provider": "Camellia MUA Team",
+      "price": "500.000 d",
+      "rating": 4.8,
+      "reviewCount": 211,
+      "description": "Makeup ky yeu cho ca nhan va nhom lop, tong tre trung, co nhan lam som cho ekip nhieu nguoi.",
+      "image": "https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p19-basic",
+          "name": "Makeup 1 nguoi",
+          "duration": "1 gio",
+          "location": "Tan noi / tai studio",
+          "price": "500.000 d"
+        },
+        {
+          "id": "p19-group",
+          "name": "Nhom 5 nguoi tro len",
+          "duration": "Theo luot",
+          "location": "Tan noi",
+          "price": "2.200.000 d"
+        }
+      ]
+    },
+    {
+      "id": 20,
+      "categoryId": 3,
+      "title": "Thue Phu kien Concept",
+      "provider": "Mori Props",
+      "price": "120.000 d",
+      "rating": 4.7,
+      "reviewCount": 67,
+      "description": "Cho thue tui, mu, hoa cuoi, khan, kinh va nhieu phu kien danh cho buoi chup studio hoac ngoai troi.",
+      "image": "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=1200&q=80",
+      "avatar": "https://images.unsplash.com/photo-1494790108755-2616b612b786?auto=format&fit=crop&w=200&q=80",
+      "packages": [
+        {
+          "id": "p20-basic",
+          "name": "Thue 3 phu kien",
+          "duration": "1 ngay",
+          "location": "Nhan tai shop",
+          "price": "120.000 d"
+        },
+        {
+          "id": "p20-full",
+          "name": "Set props 10 mon",
+          "duration": "1 ngay",
+          "location": "Nhan tai shop",
+          "price": "350.000 d"
         }
       ]
     }
